@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  max-width: 18.75rem;
+  margin: 1.25rem auto;
+  -webkit-box-shadow: 0px 0px 30px 2px #000;
+          box-shadow: 0px 0px 30px 2px #000;
+}
+
+.card-img {
+  background: url("http://img.taste.com.au/UZVXAdo7/taste/2016/11/chinese-egg-noodle-and-vegetable-stir-fry-94186-1.jpeg") no-repeat center;
+  background-size: cover;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  min-height: 9.375rem;
+}
+
+.card-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.heart {
+  fill: #2622a8;
+}
+
+.card-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 0.5rem;
+}
+
+.time,
+.serves {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid;
+}
+
+.accent-text {
+  color: #7471e1;
+  margin-left: 0.3rem;
+  margin-right: 0.2rem;
+  font-weight: bold;
+}
+
+.food-name {
+  color: #212129;
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+.block-row-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 0.5rem;
+}
+
+.card-btn {
+  display: block;
+  background: #15125C;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 10px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.card-btn:hover {
+  background: #2f2e5c;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+/*# sourceMappingURL=recipe-card.css.map */

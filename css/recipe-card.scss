@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+$primary-color:#15125C;
+$secondary-color:#2f2e5c;
+$accent1:#7471e1;
+$accent2:#2622a8;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.card {
+    position: relative;
+    background: #fff;
+    max-width: 18.75rem;
+    margin: 1.25rem auto;
+    box-shadow: 0px 0px 30px 2px #000;
+}
+
+.card-img {
+    background: url("http://img.taste.com.au/UZVXAdo7/taste/2016/11/chinese-egg-noodle-and-vegetable-stir-fry-94186-1.jpeg") no-repeat center;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+    min-height: 9.375rem;
+}
+
+.card-img:hover {
+    transform: scale(1.1);
+}
+
+.heart {
+    fill: $accent2;
+}
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0.5rem;
+}
+
+.time,
+.serves {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+}
+
+.accent-text {
+    color: $accent1;
+    margin-left: 0.3rem;
+    margin-right: 0.2rem;
+    font-weight: bold;
+}
+
+.food-name {
+    color: #212129;
+    font-weight: bold;
+    padding-left: 0.5rem;
+}
+
+.block-row-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0.5rem;
+}
+
+.card-btn {
+    display: block;
+    background: $primary-color;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 10px;
+    transition: 250ms;
+}
+
+.card-btn:hover {
+    background: $secondary-color;
+    transition: 250ms;
+}

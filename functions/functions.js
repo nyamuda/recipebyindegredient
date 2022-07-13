@@ -10,7 +10,8 @@ function buildRecipeCard(name, time, servings, img) {
    </div>
    <div class="text">
        <h1 class="food-name">
-           ${recipeName}
+           ${recipeName}<span class="tooltip">${name}</span>
+
        </h1>
        <div class="card-bottom">
            <div class="block-row-col">
@@ -35,7 +36,7 @@ function buildRecipeCard(name, time, servings, img) {
 function cutRecipeName(name) {
     let nameArray = name.split(" ");
     if (nameArray.length > 3) {
-        let newName = `${nameArray[0]} ${nameArray[1]} ${nameArray[2]}...`;
+        let newName = `${nameArray[0]} ${nameArray[1]} ${nameArray[2]} ...`;
         return newName;
     }
     return name;

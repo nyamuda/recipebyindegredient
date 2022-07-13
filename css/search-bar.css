@@ -10,15 +10,16 @@
   background-image: url("https://cdn-icons-png.flaticon.com/512/2089/2089805.png");
   background-repeat: no-repeat;
   border: none;
+  border-bottom: 1px solid #121112;
   cursor: pointer;
-  padding-left: 2rem;
+  padding-left: 2.5rem;
   padding-right: 1rem;
   background-size: 1.5rem 1.5rem;
   position: relative;
   background-color: transparent;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  width: 0px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 20rem;
   background-position: 5px center;
   height: 3rem;
   font-size: 1.2rem;
@@ -27,8 +28,10 @@
 .ingredients-input:focus {
   width: 20rem;
   background-color: #ffffff;
-  border: 1px solid #2622a8;
+  border-bottom: 1px solid #2622a8;
   outline: none;
   color: #15125C;
+  -webkit-box-shadow: 0 0.3rem 1rem #7471e1;
+          box-shadow: 0 0.3rem 1rem #7471e1;
 }
 /*# sourceMappingURL=search-bar.css.map */

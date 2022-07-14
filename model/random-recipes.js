@@ -4,7 +4,7 @@ import { buildRecipeCard } from '../functions/functions';
 
 
 
-let randomContainer = document.getElementById("random-container");
+let recipeContainer = document.getElementById("random-container");
 
 
 
@@ -21,13 +21,14 @@ async function buildRandomRecipes() {
         let img = recipe.image;
         let time = recipe.readyInMinutes;
         let servings = recipe.servings;
+        let id = recipe.id;
 
-        let card = buildRecipeCard(name, time, servings, img);
+        let card = buildRecipeCard(name, time, servings, img, id);
 
         let div = document.createElement("div");
         div.innerHTML = card;
 
-        randomContainer.appendChild(div);
+        recipeContainer.appendChild(div);
 
     });
 

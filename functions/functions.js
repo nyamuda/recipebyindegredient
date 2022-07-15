@@ -182,7 +182,7 @@ let clickFavoriteIcon = icon => {
 
 
 //checking to see if we have recipe data in the local storage
-//if not, we add new data
+//if not, we add new data ---an empty array
 let checkLocalStorageData = () => {
     //get all the ids from local storage
 

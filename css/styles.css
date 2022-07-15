@@ -1,9 +1,23 @@
+/**
+ * CONTENTS
+ *
+ * RECIPE CARD
+ * ................
+ *
+ * RECIPE LIST
+ * ................
+ *
+ * SEARCH BAR
+ * ...........
+ *
+ * HEADER
+ * .............
+ * 
+ */
 @import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
-.app-name {
-  font-family: "Bad Script", cursive;
-  font-size: 3rem;
-}
-
+/*------------------------------------*\
+  #RECIPE CARD
+\*------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -159,6 +173,41 @@ body {
   transition: 250ms;
 }
 
+/*------------------------------------*\
+  #RECIPE LIST
+\*------------------------------------*/
+.random-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .random-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+/*------------------------------------*\
+  #SEARCH BAR
+\*------------------------------------*/
 .recipe-search {
   width: 20rem;
 }
@@ -196,32 +245,11 @@ body {
           box-shadow: 0 0.3rem 1rem #7471e1;
 }
 
-.random-container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .random-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
+/*------------------------------------*\
+  #HEARDER
+\*------------------------------------*/
+.app-name {
+  font-family: "Bad Script", cursive;
+  font-size: 3rem;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -75,7 +75,7 @@ async function buildSearchedRecipes(ingredients) {
 //fetch recipes from an API
 //based on the ingredients entered
 function getSearchedRecipes(ingredients) {
-    return fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&apiKey=72f9b142aa074a93b5f039fbeb9b9ec4&number=1`)
+    return fetch(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&apiKey=72f9b142aa074a93b5f039fbeb9b9ec4&number=8`)
         .then(res => {
             if (res.ok) {
                 return res.json();
@@ -91,7 +91,7 @@ function getSearchedRecipes(ingredients) {
 //by passing in their id's as a string
 //separated by a comma
 function getRecipesByIdInBulk(idsString) {
-    return fetch(`https://api.spoonacular.com/recipes/informationBulk?ids=${idsString}&apiKey=72f9b142aa074a93b5f039fbeb9b9ec4&number=1`)
+    return fetch(`https://api.spoonacular.com/recipes/informationBulk?ids=${idsString}&apiKey=72f9b142aa074a93b5f039fbeb9b9ec4&number=8`)
         .then(res => {
             if (res.ok) {
                 return res.json();

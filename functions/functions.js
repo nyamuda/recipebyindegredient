@@ -32,8 +32,9 @@ function buildRecipeCard(name, time, servings, img, id) {
                    <p><span class="accent-text">${servings}</span>Serving</p>
                </div>
            </div>
-           <a class="heart-container">
-           <svg id="${id}" class="heart" data-favorite=${isFavorite} fill="${fillColor}" xmlns="http://www.w3.org/2000/svg" height="48px" width="48px"><path d="m24 41.95-2.05-1.85q-5.3-4.85-8.75-8.375-3.45-3.525-5.5-6.3T4.825 20.4Q4 18.15 4 15.85q0-4.5 3.025-7.525Q10.05 5.3 14.5 5.3q2.85 0 5.275 1.35Q22.2 8 24 10.55q2.1-2.7 4.45-3.975T33.5 5.3q4.45 0 7.475 3.025Q44 11.35 44 15.85q0 2.3-.825 4.55T40.3 25.425q-2.05 2.775-5.5 6.3T26.05 40.1Z"/></svg></a>
+           <a class="heart-container heart-link" href="#">
+           <svg id="${id}" class="heart" data-favorite=${isFavorite} fill="${fillColor}" xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m12 21.275-1.6-1.425q-2.55-2.3-4.212-3.963Q4.525 14.225 3.55 12.9q-.975-1.325-1.362-2.45Q1.8 9.325 1.8 8.15q0-2.45 1.625-4.075T7.5 2.45q1.3 0 2.463.525 1.162.525 2.037 1.5.85-.975 2.025-1.5Q15.2 2.45 16.5 2.45q2.425 0 4.062 1.625Q22.2 5.7 22.2 8.15q0 1.175-.388 2.288-.387 1.112-1.362 2.437-.975 1.325-2.65 3-1.675 1.675-4.225 3.975Z"/></svg>
+           </a>
        </div>
    </div>
    <a href="#" class="card-btn">View Recipe</a>
@@ -108,21 +109,31 @@ let isFavoriteRecipe = id => {
 }
 
 
+
+
+
+
+
 //when you click the favorite icon
 let clickFavoriteIcon = icon => {
     //get all the ids from local storage
     let likedRecipeIds = JSON.parse(localStorage.getItem("favoriteRecipesIds"));
 
 
-    let isFavorite = Boolean(icon.getAttribute("data-favorite"));
+    let isFavorite = icon.getAttribute("data-favorite");
     let id = Number(icon.getAttribute("id"));
-    let doesIdExist = Boolean(likedRecipeIds.includes(id));
+    let doesIdExist = likedRecipeIds.includes(id);
+    let color = "#2622a8";
 
 
 
 
-    if (isFavorite && doesIdExist) {
-        icon.fill = "";
+    if (isFavorite == "true" && doesIdExist) {
+        //change color of the icon
+        color = "";
+
+        icon.removeAttribute("fill");;
+        icon.setAttribute("fill", color);
         //remove the id from the likedRecipesIds array
         let recipeIndx = likedRecipeIds.indexOf(id);
 
@@ -139,18 +150,21 @@ let clickFavoriteIcon = icon => {
     }
 
     //if the recipe is not a favorite one
-    console.log(isFavorite);
+    console.log(icon);
+    console.log(doesIdExist);
 
-    if (!isFavorite && !doesIdExist) {
-        let color = "#2622a8";
+
+    if (isFavorite == "false" && !doesIdExist) {
+        //change the color of the icon
+        icon.removeAttribute("fill");;
         icon.setAttribute("fill", color);
 
+        //add the id of the recipe to the liked recipes array
         likedRecipeIds.push(id);
 
 
         //save the array to the local storage
         localStorage.setItem("favoriteRecipesIds", JSON.stringify(likedRecipeIds));
-
         icon.setAttribute("data-favorite", true);
 
 
@@ -163,6 +177,8 @@ let clickFavoriteIcon = icon => {
     // if (event.target)
 
 }
+
+
 
 
 //checking to see if we have recipe data in the local storage

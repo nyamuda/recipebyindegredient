@@ -1,4 +1,4 @@
-import { buildRecipeCard, combineIdsToString, checkLocalStorageData, clickFavoriteIcon } from '../functions/functions';
+import { buildRecipeCard, combineIdsToString, checkLocalStorageData, clickFavoriteIcon, buildFavRecipesList } from '../functions/functions';
 import { getSearchedRecipes, getRecipesByIdInBulk, getRandomRecipes } from '../model/home-model';
 
 
@@ -74,9 +74,9 @@ async function buildSearchedRecipes(ingredients) {
     //we want to add event listeners to the cards favorite icon
     heartContainer = [...document.getElementsByClassName("heart-container")];
     heartContainer.forEach(icon => {
-        icon.addEventListener("click", () => {
-
-            clickFavoriteIcon(icon.firstElementChild)
+        icon.addEventListener("click", (e) => {
+            clickFavoriteIcon(icon.firstElementChild);
+            e.preventDefault();
         })
     })
 
@@ -108,9 +108,10 @@ async function buildRandomRecipes() {
     //we want to add event listeners to the cards favorite icon
     heartContainer = [...document.getElementsByClassName("heart-container")];
     heartContainer.forEach(icon => {
-        icon.addEventListener("click", () => {
+        icon.addEventListener("click", (e) => {
 
             clickFavoriteIcon(icon.firstElementChild)
+            e.preventDefault();
         })
     })
 
@@ -118,3 +119,4 @@ async function buildRandomRecipes() {
 }
 
 buildRandomRecipes();
+buildFavRecipesList()

@@ -1,0 +1,140 @@
+$primary-color:#15125C;
+$secondary-color:#2f2e5c;
+$accent1:#7471e1;
+$accent2:#2622a8;
+$bottom-space:0rem;
+
+/*------------------------------------*\
+  #RECIPE HEADING
+\*------------------------------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: $primary-color;
+}
+
+body {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid red;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-container {
+    width: 100%;
+}
+
+.card-img {
+    background-image: url("https://assets.unileversolutions.com/recipes-v2/230900.png?imwidth=500");
+    background-size: cover;
+    height: 20rem;
+    width: 100%;
+}
+
+.heart-link {
+    position: relative;
+    left: 80%;
+    top: 5%;
+    background-color: #fff;
+    border: 0.1px solid white;
+    text-align: center;
+    padding-top: 1rem;
+    border-radius: 50%;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    // border-radius: 50%;
+    // padding: 0.4rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.block-row-col {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: $bottom-space;
+}
+
+.recipe-author {
+    margin-top: -0.8rem;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.food-name {
+    color: #212129;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: $bottom-space;
+}
+
+.time,
+.serves {
+    display: flex;
+    align-items: center;
+}
+
+.serves {
+    margin-left: 1rem;
+}
+
+.accent-text {
+    color: $accent1;
+    margin-left: 0.3rem;
+    margin-right: 0.2rem;
+    font-weight: bold;
+}
+
+@media (min-width:768px) {
+    .card-head {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .card-img-container {
+        grid-column: 1/4;
+        width: 80%;
+    }
+    .text {
+        grid-column: 4/6;
+        margin-left: -3rem;
+    }
+}
+
+
+/*------------------------------------*\
+  #RECIPE INGREDIENTS & INSTRUCTIONS
+\*------------------------------------*/
+
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    margin-bottom: -0.5rem;
+}

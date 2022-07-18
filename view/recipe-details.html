@@ -6,135 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/recipe-details.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="description-page">
-            <div class="header">
-                <h1 class="logo">CodePenCooks</h1>
+    <div class="card">
+        <section class="card-head">
+            <div class="card-img-container">
+
+                <div class="card-img">
+                    <a class="heart-container heart-link" href="#"><svg id="heart-icon" class="heart" fill="" xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m12 21.275-1.6-1.425q-2.55-2.3-4.212-3.963Q4.525 14.225 3.55 12.9q-.975-1.325-1.362-2.45Q1.8 9.325 1.8 8.15q0-2.45 1.625-4.075T7.5 2.45q1.3 0 2.463.525 1.162.525 2.037 1.5.85-.975 2.025-1.5Q15.2 2.45 16.5 2.45q2.425 0 4.062 1.625Q22.2 5.7 22.2 8.15q0 1.175-.388 2.288-.387 1.112-1.362 2.437-.975 1.325-2.65 3-1.675 1.675-4.225 3.975Z"/></svg></a>
+                </div>
             </div>
+            <div class="text">
+                <h1 id="recipe-name" class="food-name">
+                    Chinese Noodles the home of
+                </h1>
+                <div class="card-bottom">
+                    <div class="block-row-col">
+                        <div class="time"><img class="card-icon" src="/images/schedule_FILL1_wght400_GRAD0_opsz48.png" alt="time" width="30px">
+                            <p><span id="time-recipe" class="accent-text">15</span>Mins</p>
 
-            <figure>
-                <img class="top-image" src="https://assets.codepen.io/652/shania-pinnata-7E-vKgzahd8-unsplash.jpg" alt="spaghetti with pesto sauce and cherry tomatoes.">
-                <!-- full size image URL: https://images.unsplash.com/photo-1593253787226-567eda4ad32d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2434&q=80 -->
-                <figcaption>Photo by Shania Pinnata</figcaption>
-            </figure>
+                        </div>
+                        <div class="serves"><img class="card-icon" src="/images/people.png" alt="people" width="30px">
+                            <p><span id="servings-recipes" class="accent-text">2</span>Serving</p>
+                        </div>
+                    </div>
 
-            <h1>Pasta with Pesto & Tomatoes</h1>
-            <hr>
+                    <div class="recipe-author">
+                        <p id="author-recipe">Made by Pierce</p>
+                    </div>
 
-            <h3 role="doc-subtitle">This quick and delicious pasta dish is the perfect way to use up a summer bounty of basil and tomatoes! </h3>
+                </div>
 
-            <div class="recipe_details">
-                <ul>
-                    <li><span class="iconify" data-icon="bi:clock-fill" data-inline="false"></span></li>
-                    <li>PREP<br>5 mins</li>
-                    <li>COOK<br>25 mins</li>
-                    <li>TOTAL<br>30 mins</li>
-                </ul>
-                <ul class="servings">
-                    <li><span class="iconify" data-icon="emojione-monotone:fork-and-knife" data-inline="false"></span></li>
-                    <li>SERVINGS<br>4</li>
-                </ul>
             </div>
+        </section>
 
-        </div>
-
-        <div class="sheet">
-            <div class="ingredients">
-                <ul class="ingredients-list">
+        <section class="ingredients-instructions">
+            <div class="ingredients-detail">
+                <h2>Ingredients</h2>
+                <ul id="ingredients-container" class="ingredients-list">
                     <li>
                         <input type="checkbox" id="ing-1" />
                         <label for="ing-1">8 oz. spaghetti or linguine pasta</label>
                     </li>
-                    <li>
-                        <input type="checkbox" id="ing-2" />
-                        <label for="ing-2">2 cups fresh basil leaves + 4-8 leaves for garnish</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="ing-3" />
 
-                        <label for="ing-3">2 cloves garlic</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="ing-4" />
-                        <label for="ing-4">2 tbsp. pine nuts or blanched almonds</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="ing-5" />
-                        <label for="ing-5">1/2 cup olive oil</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="ing-6" />
-
-                        <label for="ing-6">1/2 cup grated Parmesan cheese + 2 tbsp for garnish</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="ing-7" />
-
-                        <label for="ing-7">1/8 tsp salt</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="ing-8" />
-                        <label>1 pint cherry tomatoes</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="ing-9" />
-                        <label for="ing-9">1 tsp olive oil</label>
-                    </li>
                 </ul>
-
-                <p class="variation">Variation: Got no time, or no fresh basil? Use a 6 ounce jar of prepared pesto instead.</p>
-                <figure>
-                    <img class="tomatoes" src="https://assets.codepen.io/652/tamanna-rumee-nswz6tIpgZk-unsplash.jpg" alt="tomato halves surrounded by basil leaves and peppercorns.">
-                    <!-- full size image URL: https://images.unsplash.com/photo-1606923829579-0cb981a83e2e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80-->
-
-                    <figcaption class="tomato-cap">Photo by Tamanna Rumee</figcaption>
-                </figure>
-
             </div>
-
-            <div class="process">
-                <div class="description">
-                    <p>Don't have a green thumb? Never fear! You can knock out this classic pasta dish in no time with a jar of prepared pesto sauce. </p>
-                </div>
-
-                <ol class="instructions">
-                    <li>Bring 4 quarts of water to a rolling boil in a large pot. Salt the water generously and add the pasta. </li>
-                    <li>While the pasta cooks, make the pesto.
-                        <ul>
-                            <li>Remove stems from basil leaves.</li>
-                            <li>Put the basil, garlic, and pine nuts or almonds into the bowl of a food processor and pulse it a few times to chop them up.</li>
-                            <li>Then, turn the food processor on and <strong>slowly</strong> pour the olive oil through the feeder tube to blend with the chopped herbs and nuts. </li>
-                            <li>Process until all ingredients are fully blended, stopping the food processor to scrape down the sides occasionally to get it all mixed. </li>
-                            <li>Turn off the food processor, and add the salt and Parmesan, then pulse a few times to blend.</li>
-                        </ul>
-                    </li>
-                    <li>Heat a large skillet over medium heat. </li>
-                    <li>Add the 1/2 tsp. olive oil to the heated skillet.</li>
-                    <li>Add the cherry tomatoes to the skillet and let them blister, stirring occasionally and gently so they don't burst. </li>
-                    <li>Remove tomatoes from the pan and set aside. </li>
-                    <li>Drain the pasta, reserving 1/4 cup of the cooking water.</li>
-                    <li>Return the pasta to the pot</li>
-                    <li>Add the reserved cooking water and pesto to the pasta and stir to mix</li>
-                    <li>Plate the pasta and add 6-8 tomatoes to each plate</li>
-                    <li>Garnish with reserved basil leaves and Parmesean and serve. Buon Appetito!</li>
-                </ol>
+            <div class="instructions-detail">
+                <h2>Instructions</h2>
             </div>
-        </div>
+        </section>
+
     </div>
-
-    <div class="close" id="close"><span class="iconify" data-icon="carbon:close-outline" data-inline="false"></span></div>
-
-    <nav class="tabs">
-        <input type="radio" id="ingredients" name="tabs" />
-        <label for="ingredients" class="tab">Ingredients</label>
-        <input type="radio" id="process" name="tabs" />
-        <label for="process" class="tab">Process</label>
-    </nav>
 </body>
 
 </html>

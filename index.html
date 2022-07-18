@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="./css/home.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
+        .background-img {
+            background-image: linear-gradient( to bottom, rgba(122, 121, 117, 0.52), rgba(0, 0, 0, 0.822)), url("https://images.unsplash.com/photo-1606859191214-25806e8e2423?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=835&q=80");
+            /* min-height: 960px; */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            height: 25rem;
+            margin-bottom: 47px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            color: wheat;
+            padding-left: 1rem;
+            border-bottom: 20px solid blue;
+            width: 100%;
+        }
+        
         .expanded {
             overflow: hidden;
             transition: all 0.4s ease-in-out;
@@ -40,8 +59,7 @@
         .recipes-section {
             display: grid;
             width: 100%;
-            grid-template-columns: 5fr 1fr;
-            border: 1px solid;
+            grid-template-columns: 4fr 1fr;
         }
         
         .fav-recipes {
@@ -91,6 +109,9 @@
     <header>
         <p class="app-name">Ingredient Recipes</p>
     </header>
+    <div class="background-img">
+        heloo
+    </div>
     <form role="search" class="recipe-search">
         <label>
             <input id="search-input" type="search" class="ingredients-input" placeholder="Enter ingredients..."/>

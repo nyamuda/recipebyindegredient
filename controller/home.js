@@ -52,6 +52,7 @@ async function buildSearchedRecipes(ingredients) {
     let fullInformationRecipes = await getRecipesByIdInBulk(idsCommaSeparated);
 
 
+    console.log(fullInformationRecipes + "hello");
     //let's empty the recipe container
     recipeContainer.innerHTML = "";
 

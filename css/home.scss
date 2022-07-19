@@ -26,6 +26,7 @@
  * ........................
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 $primary-color:#15125C;
 $secondary-color:#2f2e5c;
@@ -34,6 +35,8 @@ $accent2:#2622a8;
 $header-font:'Bad Script',
 cursive;
 $padding-left:1rem;
+$body-font:'Roboto Condensed',
+sans-serif;
 
 /*------------------------------------*\
   #BODY
@@ -55,6 +58,7 @@ body {
     width: 100%;
     margin: auto;
     align-items: flex-start;
+    font-family: $body-font;
 }
 
 .block1 {

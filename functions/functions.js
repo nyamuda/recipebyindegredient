@@ -46,7 +46,7 @@ export function buildRecipeCard(name, time, servings, img, id) {
            </a>
        </div>
    </div>
-   <a href="#" class="card-btn">View Recipe</a>
+   <a href='view/recipe-details.html?id=${id}' class="card-btn">View Recipe</a>
 </div>`;
     return card;
 }
@@ -184,7 +184,6 @@ export let buildFavRecipesList = () => {
     let storageRecipeData = JSON.parse(localStorage.getItem("favoriteRecipes"));
 
     favListContainer.innerHTML = "";
-    console.log(storageRecipeData);
 
     storageRecipeData.forEach(recipe => {
         // let item = document.createElement('li');
@@ -241,7 +240,7 @@ export let buildRecipeDetailsView = (name, time, servings, img, id, author) => {
     //add servings
     servingsRecipe.innerHTML = servings;
     //add author
-    authorRecipe.innerHTML = `By ${author}`;
+    authorRecipe.innerHTML = `${author}`;
 
 }
 

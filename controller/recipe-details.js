@@ -40,6 +40,13 @@ async function buildRecipeDetails() {
     let img = recipeInformation["image"];
     let id = recipeInformation["id"];
     let author = recipeInformation["sourceName"];
+
+    //sometimes author is not available ---> null
+    if (!author) {
+        author = "";
+    } else {
+        author = "By " + author;
+    }
     buildRecipeDetailsView(name, time, servings, img, id, author);
 
     //build ingredients

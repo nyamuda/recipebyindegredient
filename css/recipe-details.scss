@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 $primary-color:#15125C;
 $secondary-color:#2f2e5c;
@@ -6,6 +7,8 @@ $accent2:#2622a8;
 $bottom-space:0rem;
 $header-font:'Bad Script',
 cursive;
+$body-font:'Roboto Condensed',
+sans-serif;
 $padding-left:1rem;
 
 /*------------------------------------*\
@@ -26,6 +29,7 @@ body {
     width: 100%;
     margin: auto;
     align-items: flex-start;
+    font-family: $body-font;
 }
 
 ::-webkit-scrollbar {
@@ -129,7 +133,7 @@ header {
 .food-name {
     color: #212129;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 1rem;
     margin-bottom: $bottom-space;
 }

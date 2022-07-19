@@ -9,174 +9,59 @@
     <link rel="stylesheet" href="./css/home.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        .background-img {
-            background-image: linear-gradient( to bottom, rgba(122, 121, 117, 0.52), rgba(0, 0, 0, 0.822)), url("https://images.unsplash.com/photo-1606859191214-25806e8e2423?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=835&q=80");
-            /* min-height: 960px; */
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-            height: 25rem;
-            margin-bottom: 47px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            color: wheat;
-            padding-left: 1rem;
-            border-bottom: 20px solid blue;
-            width: 100%;
-        }
-        
-        .expanded {
-            overflow: hidden;
-            transition: all 0.4s ease-in-out;
-            max-height: 38rem;
-            width: 100%;
-            overflow-y: scroll;
-        }
-        
-         ::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-         ::-webkit-scrollbar-track {
-            background-color: #ebebeb;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-        }
-        
-         ::-webkit-scrollbar-thumb {
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            background: #6d6d6d;
-        }
-        
-        .expandable {
-            max-height: 0;
-        }
-        
-        .recipes-section {
-            display: grid;
-            width: 100%;
-            grid-template-columns: 4fr 1fr;
-        }
-        
-        .fav-recipes {
-            margin-left: 1rem;
-        }
-        
-        .section1 {
-            border: 1px solid;
-        }
-        
-        li a {
-            margin-left: 0.5rem;
-        }
-        
-        li {
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            width: auto;
-        }
-        
-        .recipe-icon {
-            font-size: 2rem;
-        }
-        
-        .btn {
-            width: 100%;
-            cursor: pointer;
-            margin: 0;
-            padding: .5rem 1rem;
-            background: #636363;
-            background: #4c96d7;
-            border: none;
-            color: #fff;
-            font-size: 1em;
-            font-weight: 400;
-            text-align: start;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-        }
+
     </style>
 </head>
 
 <body>
     <header>
-        <p class="app-name">Ingredient Recipes</p>
+        <h1 class="app-name">Ingredient Recipes</h1>
     </header>
-    <div class="background-img">
-        heloo
-    </div>
-    <form role="search" class="recipe-search">
-        <label>
+    <main>
+        <div class="background-img">
+            <h2 class="background-img-text">Get a list of delectable recipes that you can make with ingredients you already have.</h2>
+        </div>
+        <form role="search" class="recipe-search">
+            <h3>List all your ingredients separated by a comma</h3>
+            <p>Example: "tomatoes,onions,rice"</p>
+            <label>
             <input id="search-input" type="search" class="ingredients-input" placeholder="Enter ingredients..."/>
         </label>
-        <input type="submit" class="recipe-search-btn" value="Search" />
-    </form>
+            <input type="submit" class="recipe-search-btn" value="Search" />
+        </form>
 
-    <!-- <div class="card">
-        <div class="card-img">
-        </div>
-        <div class="text">
-            <h1 class="food-name">
-                Chinese Noodles the home of
-            </h1>
-            <div class="card-bottom">
-                <div class="block-row-col">
-                    <div class="time"><img class="card-icon" src="/images/schedule_FILL1_wght400_GRAD0_opsz48.png" alt="time" width="20px">
-                        <p><span class="accent-text">15</span>Mins</p>
 
-                    </div>
-                    <div class="serves"><img class="card-icon" src="/images/people.png" alt="people" width="20px">
-                        <p><span class="accent-text">2</span>Serving</p>
+
+        <div class="recipes-section">
+            <section>
+                <div id="random-container" class="random-container"></div>
+            </section>
+
+            <section class="section2">
+
+                <div class="expand-container">
+                    <button class="btn" id="expand-btn">Your favorite recipes</button>
+
+                    <div id="expanding-block" class="expanded">
+                        <ul class="fav-recipes" id="fav-list">
+
+                        </ul>
                     </div>
                 </div>
-                <a class="heart-container heart-link" href="#"><svg class="heart" fill="" xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="m12 21.275-1.6-1.425q-2.55-2.3-4.212-3.963Q4.525 14.225 3.55 12.9q-.975-1.325-1.362-2.45Q1.8 9.325 1.8 8.15q0-2.45 1.625-4.075T7.5 2.45q1.3 0 2.463.525 1.162.525 2.037 1.5.85-.975 2.025-1.5Q15.2 2.45 16.5 2.45q2.425 0 4.062 1.625Q22.2 5.7 22.2 8.15q0 1.175-.388 2.288-.387 1.112-1.362 2.437-.975 1.325-2.65 3-1.675 1.675-4.225 3.975Z"/></svg></a>
-            </div>
-
+            </section>
         </div>
-        <a href="#" class="card-btn">View Recipe</a>
-    </div> -->
+    </main>
 
-    <div class="recipes-section">
-        <section>
-            <div id="random-container" class="random-container"></div>
-        </section>
+    <hr>
+    <footer>
 
-        <section class="section1">
-
-            <div class="expand-container">
-                <button class="btn" id="expand-btn">Your favorite recipes</button>
-
-                <div id="expanding-block" class="expanded">
-                    <ul class="fav-recipes" id="fav-list">
-
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </div>
+        <p>&copy; Ingredient Recipes. All rights reserved.</p>
+        <p>All images used are believed to be in "Fair Use". Please notify the author if any are not and they will be removed.</p>
+    </footer>
 
     <script type="module" src="/model/random-recipes.js"></script>
     <script type="module" src="/controller/home.js"></script>
 
-
-
-
-    <script>
-        //Exanding a block to show favorite recipes on clicking a button
-        let expandingBlock = document.getElementById('expanding-block');
-        let expandBtn = document.getElementById('expand-btn');
-
-        expandBtn.addEventListener('click', () => {
-            expandingBlock.classList.toggle('expandable');
-        })
-    </script>
 </body>
 
 </html>

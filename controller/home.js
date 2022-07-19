@@ -131,5 +131,21 @@ async function buildRandomRecipes() {
 
 }
 
+
+//EXPAND THE FAVORITE RECIPES VIEW
+function expandFavRecipesView() {
+    //Exanding a block to show favorite recipes on clicking a button
+    let expandingBlock = document.getElementById('expanding-block');
+    let expandBtn = document.getElementById('expand-btn');
+
+    expandBtn.addEventListener('click', () => {
+        expandingBlock.classList.toggle('expandable');
+    })
+}
+
+
+
+
 buildRandomRecipes();
 buildFavRecipesList();
+expandFavRecipesView();

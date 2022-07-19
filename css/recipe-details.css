@@ -1,6 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
 /*------------------------------------*\
-  #RECIPE HEADING
+  #BODY
 \*------------------------------------*/
+* {
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -12,25 +39,35 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: #15125C;
+  background: #6d6d6d;
 }
 
-body {
-  width: 90%;
+main {
+  width: 95%;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  border: 1px solid red;
+  margin-top: 3rem;
 }
 
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+header {
+  background-color: #2f2e5c;
+  color: #Fff;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.app-name {
+  font-family: "Bad Script", cursive;
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------------------------*\
+  #RECIPE TOP PART
+\*------------------------------------*/
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,5 +256,31 @@ ol li:before {
     -ms-grid-column-span: 3;
     grid-column: 2/5;
   }
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 2rem;
+  width: 100%;
+  color: #fff;
+  background-color: #2f2e5c;
+  padding: 1rem;
+}
+
+.footer-item {
+  padding: 0;
+  margin: 0;
 }
 /*# sourceMappingURL=recipe-details.css.map */

@@ -253,7 +253,7 @@ export let buildRecipeIngredients = ingredients => {
     let listItems = "";
 
     ingredients.forEach(ingredient => {
-        let item = `<li><input type="checkbox" id="ing-${ingredient.id}"/><label for="ing-${ingredient.id}">${ingredient.original}</label></li>`;
+        let item = `<li><input type="checkbox" id="ing-${ingredient.id}"/><label class='ing-check' for="ing-${ingredient.id}">${ingredient.original}</label></li>`;
         listItems += item;
     });
 

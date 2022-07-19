@@ -21,38 +21,39 @@
         <div class="background-img">
             <h2 class="background-img-text">Get a list of delectable recipes that you can make with ingredients you already have.</h2>
         </div>
-        <form role="search" class="recipe-search">
-            <h3>List all your ingredients separated by a comma</h3>
-            <p>Example: "tomatoes,onions,rice"</p>
-            <label>
+        <div class="block1">
+            <form role="search" class="recipe-search">
+                <h3>List all your ingredients separated by a comma</h3>
+                <p>Example: "tomatoes,onions,rice"</p>
+                <label>
             <input id="search-input" type="search" class="ingredients-input" placeholder="Enter ingredients..."/>
         </label>
-            <input type="submit" class="recipe-search-btn" value="Search" />
-        </form>
+                <input type="submit" class="recipe-search-btn" value="Search" />
+            </form>
 
 
 
-        <div class="recipes-section">
-            <section>
-                <div id="random-container" class="random-container"></div>
-            </section>
+            <div class="recipes-section">
+                <section>
+                    <div id="random-container" class="random-container"></div>
+                </section>
 
-            <section class="section2">
+                <section class="section2">
 
-                <div class="expand-container">
-                    <button class="btn" id="expand-btn">Your favorite recipes</button>
+                    <div class="expand-container">
+                        <button class="btn" id="expand-btn">Your favorite recipes</button>
 
-                    <div id="expanding-block" class="expanded">
-                        <ul class="fav-recipes" id="fav-list">
+                        <div id="expanding-block" class="expanded">
+                            <ul class="fav-recipes" id="fav-list">
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     </main>
 
-    <hr>
     <footer>
 
         <p>&copy; Ingredient Recipes. All rights reserved.</p>

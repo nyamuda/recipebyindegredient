@@ -4,8 +4,8 @@ import {
     checkLocalStorageData,
     clickFavoriteIcon,
     buildFavRecipesList
-} from '../functions/functions';
-import { getSearchedRecipes, getRecipesByIdInBulk, getRandomRecipes } from '../model/home-model';
+} from './functions';
+import { getSearchedRecipes, getRecipesByIdInBulk, getRandomRecipes } from './home-model';
 
 
 let recipeContainer = document.getElementById("random-container");

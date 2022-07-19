@@ -7,8 +7,8 @@ import {
     clickFavoriteIcon,
 
     buildFavRecipesList
-} from '../functions/functions';
-import { getRecipeById } from '../model/details-model';
+} from './functions';
+import { getRecipeById } from './details-model';
 
 
 

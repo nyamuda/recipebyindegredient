@@ -1,4 +1,10 @@
-import { buildRecipeCard, combineIdsToString, checkLocalStorageData, clickFavoriteIcon, buildFavRecipesList } from '../functions/functions';
+import {
+    buildRecipeCard,
+    combineIdsToString,
+    checkLocalStorageData,
+    clickFavoriteIcon,
+    buildFavRecipesList
+} from '../functions/functions';
 import { getSearchedRecipes, getRecipesByIdInBulk, getRandomRecipes } from '../model/home-model';
 
 
@@ -76,6 +82,11 @@ async function buildSearchedRecipes(ingredients) {
     heartContainer.forEach(icon => {
         icon.addEventListener("click", (e) => {
             clickFavoriteIcon(icon.firstElementChild);
+
+
+            //add or remove the recipe from a favoripe recipes view
+            buildFavRecipesList()
+
             e.preventDefault();
         })
     })
@@ -111,6 +122,8 @@ async function buildRandomRecipes() {
         icon.addEventListener("click", (e) => {
 
             clickFavoriteIcon(icon.firstElementChild)
+                //add or remove the recipe from a favoripe recipes view
+            buildFavRecipesList();
             e.preventDefault();
         })
     })
@@ -119,4 +132,4 @@ async function buildRandomRecipes() {
 }
 
 buildRandomRecipes();
-buildFavRecipesList()
+buildFavRecipesList();

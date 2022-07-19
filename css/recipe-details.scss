@@ -43,10 +43,10 @@ body {
 }
 
 .card-img {
-    background-image: url("https://assets.unileversolutions.com/recipes-v2/230900.png?imwidth=500");
     background-size: cover;
     height: 20rem;
     width: 100%;
+    border-radius: 8px;
 }
 
 .heart-link {
@@ -76,6 +76,7 @@ body {
 
 .recipe-author {
     margin-top: -0.8rem;
+    font-size: 1.2rem;
 }
 
 .card-bottom {
@@ -120,7 +121,7 @@ body {
     }
     .text {
         grid-column: 4/6;
-        margin-left: -3rem;
+        margin-left: -4rem;
     }
 }
 
@@ -128,6 +129,12 @@ body {
 /*------------------------------------*\
   #RECIPE INGREDIENTS & INSTRUCTIONS
 \*------------------------------------*/
+
+section.ingredients-instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 li {
     list-style: none;
@@ -137,4 +144,43 @@ li {
 
 h2 {
     margin-bottom: -0.5rem;
+}
+
+#instructions-container {
+    margin-top: 0rem;
+}
+
+ol {
+    counter-reset: list-counter;
+    list-style: none;
+    float: left;
+}
+
+ol li {
+    margin: 1.5em 0;
+    line-height: 1em
+}
+
+ol li:before {
+    content: counter(list-counter);
+    counter-increment: list-counter;
+    font-family: arial;
+    color: $accent1;
+    font: bold;
+    font-size: 2em;
+    margin-right: .5em;
+}
+
+@media (min-width:768px) {
+    section.ingredients-instructions {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+    }
+    div.ingredients-detail {
+        grid-column: 1/2;
+    }
+    div.instructions-detail {
+        grid-column: 2/5;
+    }
 }

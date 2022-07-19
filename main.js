@@ -1,1 +1,0 @@
-import * as homeController from "controller/home";

@@ -13,8 +13,6 @@ $padding-left:1rem;
 \*------------------------------------*/
 
 * {
-    // margin: 0;
-    // padding: 0;
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -47,7 +45,7 @@ body {
 }
 
 main {
-    width: 95%;
+    width: 90%;
     margin: auto;
     margin-top: 3rem;
 }
@@ -87,7 +85,7 @@ header {
 
 .card-img {
     background-size: cover;
-    height: 20rem;
+    height: 18rem;
     width: 100%;
     border-radius: 8px;
 }
@@ -95,11 +93,11 @@ header {
 .heart-link {
     position: relative;
     left: 80%;
-    top: 5%;
+    top: 10%;
     background-color: #fff;
     border: 0.1px solid white;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 2.5rem;
     border-radius: 50%;
     padding-left: 0.4rem;
     padding-right: 0.4rem;
@@ -162,9 +160,15 @@ header {
         grid-column: 1/4;
         width: 80%;
     }
+    .card-img {
+        height: 20rem;
+    }
     .text {
         grid-column: 4/6;
         margin-left: -4rem;
+    }
+    main {
+        width: 95%;
     }
 }
 
@@ -212,6 +216,15 @@ ol li:before {
     font: bold;
     font-size: 2em;
     margin-right: .5em;
+}
+
+.ing-text {
+    margin-left: 0.2rem;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
 }
 
 @media (min-width:768px) {

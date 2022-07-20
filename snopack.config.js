@@ -12,7 +12,7 @@ module.exports = {
     },
     buildOptions: {
         out: "build",
-        baseUrl: "/recipe/build/",
+        baseUrl: "/recipebyindegredient/build/",
         clean: true,
     },
     experiments: {
